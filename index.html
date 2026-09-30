@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>إلى أحلى بسبوستي ❤️</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Tahoma,Arial,sans-serif;
+    background:
+    radial-gradient(circle at top,#542653,#1b0b24 55%,#08040d);
+    color:white;
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+.star{
+    position:fixed;
+    width:3px;
+    height:3px;
+    background:white;
+    border-radius:50%;
+    opacity:.7;
+    animation:twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle{
+    from{opacity:.2;transform:scale(.7)}
+    to{opacity:1;transform:scale(1.4)}
+}
+
+.container{
+    width:92%;
+    max-width:850px;
+    margin:auto;
+    text-align:center;
+    padding:60px 0;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.heart{
+    font-size:80px;
+    animation:heartbeat 1.5s infinite;
+    filter:drop-shadow(0 0 20px #ff5c9a);
+}
+
+@keyframes heartbeat{
+    0%,100%{transform:scale(1)}
+    50%{transform:scale(1.15)}
+}
+
+h1{
+    margin-top:20px;
+    font-size:43px;
+    line-height:1.5;
+    background:linear-gradient(90deg,#fff,#ff9dcc,#fff);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.subtitle{
+    margin-top:18px;
+    font-size:21px;
+    color:#ffd5e8;
+}
+
+.small-text{
+    margin-top:15px;
+    color:#dcb5ca;
+    font-size:15px;
+}
+
+.scroll-btn,
+.reveal-btn{
+    margin-top:30px;
+    padding:14px 30px;
+    border:none;
+    border-radius:30px;
+    background:linear-gradient(90deg,#ff5d9d,#b84dff);
+    color:white;
+    font-size:17px;
+    cursor:pointer;
+    box-shadow:0 8px 25px rgba(255,70,160,.3);
+    transition:.3s;
+}
+
+.scroll-btn:hover,
+.reveal-btn:hover{
+    transform:translateY(-3px) scale(1.03);
+}
+
+/* الجزء الرومانسي */
+
+.romantic-section{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.romantic-card{
+    width:100%;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,160,210,.3);
+    border-radius:30px;
+    padding:45px 28px;
+    backdrop-filter:blur(12px);
+    box-shadow:0 0 45px rgba(255,80,160,.15);
+    position:relative;
+    overflow:hidden;
+}
+
+.romantic-card::before{
+    content:"♡";
+    position:absolute;
+    font-size:220px;
+    opacity:.04;
+    left:-20px;
+    top:-70px;
+}
+
+.romantic-card h2{
+    color:#ff9dcc;
+    font-size:30px;
+    margin-bottom:30px;
+}
+
+.love-message{
+    line-height:2.4;
+    font-size:20px;
+    color:#ffe8f2;
+    min-height:220px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.hidden-message{
+    display:none;
+    animation:fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* البصمة */
+
+.fingerprint-section{
+    min-height:90vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+.instruction{
+    font-size:24px;
+    color:#ffd0e5;
+    margin-bottom:35px;
+    font-weight:bold;
+}
+
+.fingerprint{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    border:3px solid #ff82b8;
+    background:radial-gradient(circle,#6b2452,#241027);
+    box-shadow:
+        0 0 25px #ff4d9d,
+        inset 0 0 35px rgba(255,100,180,.2);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    user-select:none;
+    position:relative;
+    transition:.2s;
+}
+
+.fingerprint:active{
+    transform:scale(.94);
+}
+
+.fingerprint-icon{
+    font-size:80px;
+    opacity:.9;
+}
+
+.progress{
+    position:absolute;
+    inset:-9px;
+    border-radius:50%;
+    border:6px solid transparent;
+    border-top-color:#ff9dcc;
+    transform:rotate(-45deg);
+    opacity:0;
+}
+
+.holding .progress{
+    opacity:1;
+    animation:progress 5s linear forwards;
+}
+
+@keyframes progress{
+    from{transform:rotate(-45deg)}
+    to{transform:rotate(315deg)}
+}
+
+.hold-text{
+    margin-top:25px;
+    color:#ffbad8;
+    font-size:16px;
+}
+
+/* العقد */
+
+.contract{
+    display:none;
+    padding:100px 0;
+    animation:contractAppear 1.5s ease forwards;
+}
+
+@keyframes contractAppear{
+    from{
+        opacity:0;
+        transform:translateY(70px) scale(.9);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
+
+.contract-paper{
+    background:#fff8e8;
+    color:#39241c;
+    max-width:700px;
+    margin:auto;
+    padding:45px 30px;
+    border-radius:8px;
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.5),
+        inset 0 0 30px rgba(120,80,30,.15);
+
+    border:8px double #9b713f;
+    position:relative;
+}
+
+.contract-paper h2{
+    font-family:Georgia,serif;
+    color:#6b4423;
+    font-size:35px;
+    margin-bottom:30px;
+}
+
+.contract-paper p{
+    font-size:18px;
+    line-height:2;
+}
+
+.contract-line{
+    height:1px;
+    background:#9b713f;
+    margin:25px 0;
+}
+
+.names{
+    font-size:20px;
+    line-height:2.5;
+}
+
+.final-message{
+    margin-top:30px;
+    font-size:21px !important;
+    color:#7a2546;
+    font-weight:bold;
+}
+
+.signatures{
+    display:flex;
+    justify-content:space-around;
+    gap:30px;
+    margin-top:40px;
+}
+
+.signature{
+    flex:1;
+}
+
+.signature-name{
+    font-family:cursive;
+    font-size:31px;
+    color:#542a2a;
+    margin-top:15px;
+}
+
+.stamp{
+    width:115px;
+    height:115px;
+    border:4px solid #b32d4d;
+    border-radius:50%;
+    color:#b32d4d;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:35px auto 0;
+    transform:rotate(-12deg);
+    font-weight:bold;
+    font-size:18px;
+}
+
+@media(max-width:600px){
+
+    h1{
+        font-size:32px;
+    }
+
+    .subtitle{
+        font-size:18px;
+    }
+
+    .romantic-card h2{
+        font-size:25px;
+    }
+
+    .love-message{
+        font-size:17px;
+    }
+
+    .fingerprint{
+        width:165px;
+        height:165px;
+    }
+
+    .contract-paper{
+        padding:35px 18px;
+    }
+
+    .contract-paper h2{
+        font-size:27px;
+    }
+
+    .signatures{
+        gap:10px;
+    }
+
+    .signature-name{
+        font-size:25px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="star" style="top:10%;left:15%"></div>
+<div class="star" style="top:20%;left:80%"></div>
+<div class="star" style="top:35%;left:30%"></div>
+<div class="star" style="top:55%;left:90%"></div>
+<div class="star" style="top:70%;left:12%"></div>
+<div class="star" style="top:85%;left:75%"></div>
+<div class="star" style="top:45%;left:65%"></div>
+
+
+<div class="container">
+
+    <!-- البداية -->
+
+    <section class="hero">
+
+        <div class="heart">❤️</div>
+
+        <h1>
+            كل ثانية وانتي أحلى بسبوستي في الدنيا ❤️
+        </h1>
+
+        <p class="subtitle">
+            بنوتي الجميلة • بسبوستي ❤️
+        </p>
+
+        <p class="small-text">
+            عندي حاجة صغيرة معمولة مخصوص ليكي...
+        </p>
+
+        <button
+            class="scroll-btn"
+            onclick="document.getElementById('romantic').scrollIntoView({behavior:'smooth'})">
+
+            شوفي بنفسك 👀❤️
+
+        </button>
+
+    </section>
+
+
+    <!-- الجزء الرومانسي -->
+
+    <section
+        class="romantic-section"
+        id="romantic">
+
+        <div class="romantic-card">
+
+            <h2>
+                رسالة صغيرة من فيلو ليكي 💌
+            </h2>
+
+            <div class="love-message">
+
+                <div id="firstLove">
+
+                    في ناس بتعدي في حياتنا وخلاص...
+                    <br>
+
+                    وفي ناس وجودهم بيخلي الأيام نفسها أحلى ❤️
+
+                    <br><br>
+
+                    وانتي من الناس اللي وجودهم
+                    بيخلّي للحكاية معنى مختلف ✨
+
+                    <br><br>
+
+                    أنا عملت ده عشان كان نفسي أشوف فرحتك تاني
+                    بعد أول هدية...
+                    <br>
+
+                    فرحتك دي بالدنيا كلها عندي ❤️
+
+                </div>
+
+
+                <div
+                    id="secondLove"
+                    class="hidden-message">
+
+                    يا بسبوستي ❤️
+
+                    <br><br>
+
+                    يمكن الكلام مهما كان حلو
+                    مش هيقدر يوصف قد إيه وجودك
+                    بيخلّي اللحظات العادية تبقى مميزة.
+
+                    <br><br>
+
+                    وعشان كده كان لازم يكون في
+                    مفاجأة مخصوص ليكي...
+                    لأنك تستاهلي حاجة تفرح عيونك الحلوين 💗
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="reveal-btn"
+                id="loveButton"
+                onclick="showLove()">
+
+                افتحي الرسالة 💌
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- البصمة -->
+
+    <section class="fingerprint-section">
+
+        <p class="instruction">
+            اضغطي على البصمة لمدة 5 ثواني 👆
+        </p>
+
+        <div
+            class="fingerprint"
+            id="fingerprint">
+
+            <div class="progress"></div>
+
+            <div class="fingerprint-icon">
+                🖐️
+            </div>
+
+        </div>
+
+        <p
+            class="hold-text"
+            id="holdText">
+
+            مستني البصمة يا بسبوستي 👀
+
+        </p>
+
+    </section>
+
+
+    <!-- العقد - آخر حاجة -->
+
+    <section
+        class="contract"
+        id="contract">
+
+        <div class="contract-paper">
+
+            <h2>
+                💍 عقد زواج بين الطرفين 💍
+            </h2>
+
+            <p>
+                تم الاتفاق بكل الحب والضحك والسعادة
+                على بداية حكاية جميلة مليانة
+                ذكريات حلوة وهزار وضحك ❤️
+            </p>
+
+            <div class="contract-line"></div>
+
+            <div class="names">
+
+                <strong>
+                    الطرف الأول:
+                </strong>
+
+                فيلو
+
+                <br>
+
+                <strong>
+                    الطرف الثاني:
+                </strong>
+
+                بسملة
+
+            </div>
+
+            <div class="contract-line"></div>
+
+            <p class="final-message">
+
+                خلاص بقى... العقد اتختم 😌❤️
+
+                <br>
+
+                مفيش هروب من الهزار والضحك 😂
+
+                <br>
+
+                وانتي اللي بصمتي بنفسك،
+                مليش دعوة أنا 😭😂
+
+            </p>
+
+            <div class="signatures">
+
+                <div class="signature">
+
+                    <strong>
+                        الطرف الأول
+                    </strong>
+
+                    <div class="signature-name">
+                        فيلو ✍️
+                    </div>
+
+                </div>
+
+
+                <div class="signature">
+
+                    <strong>
+                        الزوجة
+                    </strong>
+
+                    <div class="signature-name">
+                        بسملة ✍️
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="stamp">
+                تم الختم ❤️
+            </div>
+
+            <p style="margin-top:30px;">
+                𓆩♡𓆪 بسبوستي × فيلو 𓆩♡𓆪
+            </p>
+
+        </div>
+
+    </section>
+
+</div>
+
+
+<script>
+
+/* الرسالة الرومانسية */
+
+function showLove(){
+
+    const first =
+        document.getElementById("firstLove");
+
+    const second =
+        document.getElementById("secondLove");
+
+    const button =
+        document.getElementById("loveButton");
+
+    first.style.display="none";
+
+    second.style.display="block";
+
+    button.innerText="كملي للمفاجأة 👀❤️";
+
+    button.onclick=function(){
+
+        document
+        .querySelector(".fingerprint-section")
+        .scrollIntoView({
+            behavior:"smooth"
+        });
+
+    };
+
+}
+
+
+/* البصمة */
+
+const fingerprint =
+    document.getElementById("fingerprint");
+
+const contract =
+    document.getElementById("contract");
+
+const holdText =
+    document.getElementById("holdText");
+
+let timer;
+let completed=false;
+
+
+function startHold(){
+
+    if(completed) return;
+
+    fingerprint.classList.add("holding");
+
+    holdText.innerText=
+        "كملي ضغط... 5 ثواني بس ⏳❤️";
+
+    timer=setTimeout(function(){
+
+        completed=true;
+
+        fingerprint.classList.remove("holding");
+
+        holdText.innerText=
+            "تم تسجيل البصمة 😂❤️";
+
+        contract.style.display="block";
+
+        setTimeout(function(){
+
+            contract.scrollIntoView({
+                behavior:"smooth"
+            });
+
+            createConfetti();
+
+        },300);
+
+    },5000);
+
+}
+
+
+function cancelHold(){
+
+    if(completed) return;
+
+    clearTimeout(timer);
+
+    fingerprint.classList.remove("holding");
+
+    holdText.innerText=
+        "حاولي تاني واضغطي 5 ثواني 👀";
+
+}
+
+
+/* الكمبيوتر */
+
+fingerprint.addEventListener(
+    "mousedown",
+    startHold
+);
+
+fingerprint.addEventListener(
+    "mouseup",
+    cancelHold
+);
+
+fingerprint.addEventListener(
+    "mouseleave",
+    cancelHold
+);
+
+
+/* الموبايل */
+
+fingerprint.addEventListener(
+    "touchstart",
+    function(e){
+
+        e.preventDefault();
+
+        startHold();
+
+    }
+);
+
+fingerprint.addEventListener(
+    "touchend",
+    function(e){
+
+        e.preventDefault();
+
+        cancelHold();
+
+    }
+);
+
+
+/* الكونفيتي ❤️ */
+
+function createConfetti(){
+
+    for(let i=0;i<90;i++){
+
+        const piece=
+            document.createElement("div");
+
+        piece.innerHTML=[
+            "❤️",
+            "💗",
+            "✨",
+            "💖",
+            "💕"
+        ][
+            Math.floor(
+                Math.random()*5
+            )
+        ];
+
+        piece.style.position="fixed";
+
+        piece.style.left=
+            Math.random()*100+"vw";
+
+        piece.style.top="-30px";
+
+        piece.style.fontSize=
+            (15+Math.random()*20)+"px";
+
+        piece.style.zIndex="9999";
+
+        piece.style.pointerEvents="none";
+
+        document.body.appendChild(piece);
+
+        const duration=
+            2000+Math.random()*2500;
+
+        piece.animate(
+            [
+                {
+                    transform:
+                    "translateY(0) rotate(0deg)",
+                    opacity:1
+                },
+                {
+                    transform:
+                    `translateY(110vh)
+                     rotate(${Math.random()*720-360}deg)`,
+                    opacity:0
+                }
+            ],
+            {
+                duration:duration,
+                easing:"cubic-bezier(.2,.8,.3,1)"
+            }
+        );
+
+        setTimeout(
+            ()=>piece.remove(),
+            duration
+        );
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
